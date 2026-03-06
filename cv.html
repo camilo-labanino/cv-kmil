@@ -1,0 +1,202 @@
+<!-- wkhtmltopdf &#45;&#45;page-size A4 &#45;&#45;margin-top 0.75in &#45;&#45;margin-right 0.75in &#45;&#45;margin-bottom 0.75in &#45;&#45;margin-left 0.75in /home/kmil/cv.html /home/kmil/cv.pdf-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Camileidis Labañino Gainza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; color: #2f2f2f; background: #f5f5f5; }
+    .wrapper {  margin: 0 auto; background: white; }
+    .header { background: #1e2a38; color: white; padding: 40px 30px; text-align: center; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: 32px; letter-spacing: 2px; }
+    .header h2 { font-size: 14px; font-weight: 600; color: #c7a355; margin-top: 10px; }
+    .header .info { display: flex; justify-content: space-around; margin-top: 30px; font-size: 13px; }
+    .columns { display: flex; }
+    .left, .right { padding: 30px; }
+    .left { width: 25%; background: #f9f9f9; border-right: 1px solid #ddd; }
+    .right { width: 70%; }
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      border-top: 2px solid #111;
+      border-bottom: 2px solid #111;
+      padding: 10px 0;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+    .section { margin-top: 15px; }
+    .section p { font-size: 13px; margin: 5px 0; }
+    .bar { background: #ccc; height: 6px; border-radius: 3px; margin: 5px 0; position: relative; }
+    .bar span { display: block; height: 6px; background: #c7a355; border-radius: 3px; position: absolute; top: 0; left: 0; }
+
+    .timeline {
+      border-left: 2px solid #c7a355;
+      margin-left: 20px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: #1e2a38;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .timeline-entry .org {
+      font-weight: bold;
+      font-size: 13px;
+      color: #1e2a38;
+    }
+    .timeline-entry .period {
+      font-size: 12px;
+      color: #999;
+    }
+    .timeline-entry .position {
+      font-weight: bold;
+      margin-top: 3px;
+      font-size: 13px;
+      color: #333;
+    }
+    .timeline-entry ul {
+      font-size: 13px;
+      margin: 5px 0 0 15px;
+      padding-left: 0;
+    }
+    .timeline-entry ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>CAMILEIDIS LABAÑINO GAINZA</h1>
+      <h2>INGENIERO EN CIENCIAS INFORMÁTICAS</h2>
+      <div class="info">
+        <div>Santa Fe, Playa, La Habana, Cuba</div>
+        <div>55632899</div>
+        <div>camilolabanino@gmail.com</div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="left">
+        <h3>EDUCACIÓN</h3>
+        <div class="section">
+          <p><strong>Ingeniero en Ciencias Informáticas</strong></p>
+          <p>Universidad de las Ciencias Informáticas, UCI / 2016</p>
+        </div>
+        <h3>HABILIDADES</h3>
+        <div class="section">
+          <p>JavaScript</p><div class="bar"><span style="width: 80%"></span></div>
+          <p>Bootstrap</p><div class="bar"><span style="width: 75%"></span></div>
+          <p>GraphQL</p><div class="bar"><span style="width: 60%"></span></div>
+          <p>Symfony</p><div class="bar"><span style="width: 70%"></span></div>
+          <p>Python</p><div class="bar"><span style="width: 85%"></span></div>
+          <p>PgSQL</p><div class="bar"><span style="width: 80%"></span></div>
+          <p>Django</p><div class="bar"><span style="width: 80%"></span></div>
+          <p>Oracle</p><div class="bar"><span style="width: 50%"></span></div>
+          <p>EXTjs</p><div class="bar"><span style="width: 60%"></span></div>
+          <p>MySQL</p><div class="bar"><span style="width: 75%"></span></div>
+          <p>HTML5</p><div class="bar"><span style="width: 80%"></span></div>
+          <p>PHP</p><div class="bar"><span style="width: 70%"></span></div>
+          <p>Java</p><div class="bar"><span style="width: 60%"></span></div>
+          <p>Redis</p><div class="bar"><span style="width: 60%"></span></div>
+          <p>Grafana</p><div class="bar"><span style="width: 55%"></span></div>
+          <p>MinIO</p><div class="bar"><span style="width: 55%"></span></div>
+          <p>Make</p><div class="bar"><span style="width: 40%"></span></div>
+          <p>N8N</p><div class="bar"><span style="width: 30%"></span></div>
+        </div>
+        <h3>CURSOS Y FORMACIÓN AUTODIDACTA</h3>
+        <div class="section">
+          <p>Desarrollo de aplicaciones web en Drupal (UCI, 2017)</p>
+          <p>Symfony 2 (UCI, 2017)</p>
+          <p>Administración avanzada de GNU/Linux (UCI, 2018)</p>
+          <p>Pruebas de penetración en aplicaciones web (UCI, 2020)</p>
+          <p>Exploración de herramientas de IA (ChatGPT, Copilot, Notion AI, etc.)</p>
+        </div>
+        <h3>IDIOMAS</h3>
+        <div class="section">
+          <p>Español (nativo)</p>
+          <p>Inglés (intermedio)</p>
+        </div>
+        <h3>DATOS PERSONALES</h3>
+        <div class="section">
+          <p>Fecha de nacimiento: 07 de septiembre de 1992</p>
+          <p>Nacionalidad: Cubana</p>
+          <p>Permiso de conducir: Categoría B</p>
+        </div>
+      </div>
+      <div class="right">
+        <h3>SOBRE MÍ</h3>
+        <div class="section">
+          <p>Ingeniero en Ciencias Informáticas con sólida experiencia en el desarrollo de aplicaciones web y de escritorio, tanto en frontend como backend. Más de 8 años de trayectoria trabajando con tecnologías como Python, Django, PHP, Symfony, JavaScript, ExtJS y bases de datos como PostgreSQL, MySQL y Oracle. Especializado en la creación de soluciones robustas para sistemas empresariales, plataformas eCommerce y servicios web.</p>
+          <p>Competente en el diseño, administración e integración de sistemas complejos, incluyendo servicios SOA, configuración de servidores y herramientas de monitoreo como Grafana. Experiencia con tecnologías modernas como GraphQL, Redis y MinIO. Hábil en la gestión de requerimientos, diseño de pruebas y soporte técnico.</p>
+          <p>Destacado por mi capacidad para trabajar eficazmente en equipo y adaptarme a entornos exigentes. Mantengo un alto rendimiento, con enfoque en la resolución de problemas, la entrega oportuna y la calidad del software.</p>
+          <p>Además, tengo familiaridad con herramientas basadas en inteligencia artificial (IA) y su aplicación en tareas de apoyo, automatización y mejora de productividad en el entorno de desarrollo.</p>
+        </div>
+        <h3>EXPERIENCIA LABORAL</h3>
+        <div class="timeline">
+          <div class="timeline-entry">
+            <div class="org">Universidad de Granma</div>
+            <div class="period">nov. 2015 - jun. 2016</div>
+            <div class="position">PROGRAMADOR</div>
+            <ul>
+              <li>Desarrollo de aplicaciones web con Python, Django, JavaScript y HTML5.</li>
+              <li>Desarrollo de aplicaciones desktop con Python y PyQt.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Centro de Informatización de Entidades - UCI</div>
+            <div class="period">2016</div>
+            <div class="position">PROGRAMADOR PRINCIPAL</div>
+            <ul>
+              <li>Desarrollo con Python, Django, ExtJS, Symfony, WordPress y PostgreSQL.</li>
+              <li>Diseño y administración de bases de datos con Oracle.</li>
+              <li>Administración de servidores y desarrollo de servicios SOA.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Universidad de las Ciencias Informáticas</div>
+            <div class="period">sep. 2018</div>
+            <div class="position">ANALISTA - PROGRAMADOR</div>
+            <ul>
+              <li>Diseño e implementación de casos de prueba.</li>
+              <li>Levantamiento de requerimientos a clientes y soporte técnico.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Cubacation / EVORAS.SURL</div>
+            <div class="period">2022</div>
+            <div class="position">PROGRAMADOR BACKEND</div>
+            <ul>
+              <li>Desarrollo de plataformas de comercio electrónico (eCommerce).</li>
+              <li>Desarrollo de sistemas de gestión contable.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Supermarket TREEW</div>
+            <div class="period">2022-2025</div>
+            <div class="position">PROGRAMADOR BACKEND, ARQUITECTO</div>
+            <ul>
+              <li>Desarrollo de sistemas y arquitectura de software.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
