@@ -1,0 +1,250 @@
+<!-- wkhtmltopdf --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in cv-v2.html cv-v2.pdf -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Camilo Labañino Gainza - Desarrollador Full Stack</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; color: #2f2f2f; background: #f5f5f5; }
+    .wrapper {  margin: 0 auto; background: white; }
+    .header { background: #1e2a38; color: white; padding: 30px 30px 26px; text-align: center; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: 32px; letter-spacing: 2px; }
+    .header h2 { font-size: 14px; font-weight: 600; color: #c7a355; margin-top: 10px; }
+    .contact { width: 100%; margin-top: 20px; border-top: 1px solid #3a4a5e; border-collapse: collapse; table-layout: fixed; }
+    .contact td { padding: 12px 8px 0; text-align: center; vertical-align: top; }
+    .contact .label { display: block; font-size: 9.5px; font-weight: 600; color: #c7a355; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 3px; }
+    .contact .value { font-size: 12.5px; color: white; }
+    .contact a { color: white; text-decoration: none; }
+    .columns { display: flex; }
+    .left, .right { padding: 30px; }
+    .left { width: 30%; background: #f9f9f9; border-right: 1px solid #ddd; }
+    .right { width: 70%; }
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      border-top: 2px solid #111;
+      border-bottom: 2px solid #111;
+      padding: 10px 0;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+    .section { margin-top: 15px; }
+    .section p { font-size: 13px; margin: 5px 0; }
+    .intro-skills {
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .skill-group {
+      font-size: 11px;
+      font-weight: 700;
+      color: #1e2a38;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 14px !important;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e3ddcd;
+    }
+    .skill-group:first-of-type { margin-top: 0 !important; }
+    .skill-list { font-size: 12.5px; line-height: 1.55; color: #3d3d3d; }
+    .skill-list strong { color: #1e2a38; }
+    .competencias p { line-height: 1.5; }
+
+    .timeline {
+      border-left: 2px solid #c7a355;
+      margin-left: 20px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .timeline-entry, .section { page-break-inside: avoid; }
+    h3 { page-break-after: avoid; }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: #1e2a38;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .timeline-entry .org {
+      font-weight: bold;
+      font-size: 13px;
+      color: #1e2a38;
+    }
+    .timeline-entry .period {
+      font-size: 12px;
+      color: #999;
+    }
+    .timeline-entry .position {
+      font-weight: bold;
+      margin-top: 3px;
+      font-size: 13px;
+      color: #333;
+    }
+    .timeline-entry ul {
+      font-size: 13px;
+      margin: 5px 0 0 15px;
+      padding-left: 0;
+    }
+    .timeline-entry ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>CAMILO LABAÑINO GAINZA</h1>
+      <h2>DESARROLLADOR FULL STACK</h2>
+      <table class="contact">
+        <tr>
+          <td><span class="label">Correo</span><span class="value"><a href="mailto:camilolabanino@gmail.com">camilolabanino@gmail.com</a></span></td>
+          <td><span class="label">Teléfono</span><span class="value">+53 5563 2899</span></td>
+          <td><span class="label">Ubicación</span><span class="value">La Habana, Cuba (GMT-5)</span></td>
+        </tr>
+        <tr>
+          <td><span class="label">LinkedIn</span><span class="value"><a href="https://www.linkedin.com/in/camil-lg-a15783273/">linkedin.com/in/camil-lg-a15783273</a></span></td>
+          <td><span class="label">Web / Portafolio</span><span class="value"><a href="https://kmil.dev">kmil.dev</a></span></td>
+          <td><span class="label">Modalidad</span><span class="value">Trabajo en remoto</span></td>
+        </tr>
+      </table>
+    </div>
+    <div class="columns">
+      <div class="left">
+        <h3>HABILIDADES TÉCNICAS</h3>
+        <div class="section">
+          <p class="skill-group">Backend</p>
+          <p class="skill-list"><strong>Python</strong>: Django, Django REST Framework, <strong>FastAPI</strong>, Celery, Channels (WebSockets), SQLAlchemy/SQLModel. PHP (Symfony), Java. APIs REST y GraphQL, microservicios, pagos con Stripe.</p>
+
+          <p class="skill-group">Bases de datos</p>
+          <p class="skill-list"><strong>PostgreSQL</strong>, MySQL, Oracle, Redis, SQLite. Modelado relacional, optimización de consultas, migraciones (Django, Alembic), multi-tenant.</p>
+
+          <p class="skill-group">DevOps</p>
+          <p class="skill-list"><strong>Docker</strong> (Compose, Swarm), <strong>GNU/Linux</strong>, Nginx, GitHub Actions, Jenkins, Git, MinIO (S3), Grafana.</p>
+
+          <p class="skill-group">IA y automatización</p>
+          <p class="skill-list">APIs de <strong>Claude</strong> y OpenAI, servidores MCP, búsqueda vectorial (Pinecone), n8n, Make. Desarrollo diario con Claude Code y Copilot.</p>
+
+          <p class="skill-group">Frontend y móvil</p>
+          <p class="skill-list">JavaScript, HTML5, CSS3, Bootstrap, HTMX, ExtJS. Apps móviles con <strong>Flutter/Dart</strong>. Firebase.</p>
+
+          <p class="skill-group">Cómo trabajo</p>
+          <p class="skill-list">Arquitectura y diseño de módulos, levantamiento de requerimientos, pruebas (pytest), revisión de código, documentación técnica, Scrum/Kanban, seguridad web (OWASP).</p>
+        </div>
+
+        <div class="section">
+        <h3>COMPETENCIAS</h3>
+        <div class="section competencias">
+          <p>Me entiendo bien con clientes no técnicos: traduzco lo que piden a algo que se pueda construir.</p>
+          <p>Saco un módulo de principio a fin sin necesitar que me lleven de la mano.</p>
+          <p>Acompaño a desarrolladores con menos experiencia y reviso su código.</p>
+          <p>Aprendo lo que haga falta: casi cada proyecto me ha traído una tecnología nueva.</p>
+        </div>
+        </div>
+
+        <h3>EDUCACIÓN</h3>
+        <div class="section">
+          <p><strong>Ingeniero en Ciencias Informáticas</strong></p>
+          <p>Universidad de las Ciencias Informáticas, UCI / 2016</p>
+        </div>
+
+        <h3>CURSOS</h3>
+        <div class="section">
+          <p>Pruebas de penetración en aplicaciones web (UCI, 2020)</p>
+          <p>Administración avanzada de GNU/Linux (UCI, 2018)</p>
+          <p>Symfony 2 (UCI, 2017)</p>
+          <p>Desarrollo de aplicaciones web en Drupal (UCI, 2017)</p>
+        </div>
+
+        <h3>IDIOMAS</h3>
+        <div class="section">
+          <p>Español (nativo)</p>
+          <p>Inglés (intermedio)</p>
+        </div>
+      </div>
+      <div class="right">
+        <h3>SOBRE MÍ</h3>
+        <div class="section">
+          <p>Ingeniero en Ciencias Informáticas con más de 9 años desarrollando aplicaciones web y móviles completas, desde la base de datos hasta la interfaz. Mi fuerte es el backend con <strong>Python (Django, FastAPI)</strong> y <strong>PostgreSQL/MySQL</strong>; en el frontend trabajo con JavaScript, HTMX y Bootstrap, y hago apps móviles con <strong>Flutter</strong>.</p>
+          <p>He llevado proyectos de principio a fin en retail, eCommerce, logística, pagos y sistemas contables: diseño la arquitectura, construyo las APIs y las pantallas, lo despliego con Docker y CI/CD, y lo mantengo. En los últimos proyectos integro modelos de lenguaje (Claude, OpenAI) en productos reales. Busco un puesto full stack en remoto.</p>
+        </div>
+        <h3>EXPERIENCIA LABORAL</h3>
+        <div class="timeline">
+          <div class="timeline-entry">
+            <div class="org">Freelance / proyectos para clientes</div>
+            <div class="period">2025 - actualidad</div>
+            <div class="position">DESARROLLADOR FULL STACK</div>
+            <ul>
+              <li>Sistema de gestión multi-sucursal (POS, inventario, compras, transferencias, caja, cuentas por cobrar) con Django, DRF, PostgreSQL, Celery y Redis, desplegado en Docker.</li>
+              <li>Plataforma multi-tenant con Django, Channels y Celery que orquesta agentes de IA; CI/CD con GitHub Actions y despliegue en Docker Swarm.</li>
+              <li>Microservicios con FastAPI y Django (registro de errores con API key, notificaciones, generación de PDF) con pipelines en Jenkins y GitHub Actions.</li>
+              <li>Generador de planes de negocio con la API de Claude que entrega un PDF por email, con cobro por Stripe.</li>
+              <li>Backend de remesas y pagos (Django, MySQL, Firebase) y de tienda online (FastAPI, SQLModel, WebSockets).</li>
+              <li>App de punto de venta en Flutter para Android.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Supermarket 23 (TREEW)</div>
+            <div class="period">2022 - 2025</div>
+            <div class="position">PROGRAMADOR BACKEND, ARQUITECTO</div>
+            <ul>
+              <li>Responsable de la arquitectura y el desarrollo del backend de la plataforma de retail y comercio electrónico.</li>
+              <li>Diseño de módulos, modelado de datos y revisión de código del equipo.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Cubacation / EVORAS.SURL</div>
+            <div class="period">2022</div>
+            <div class="position">PROGRAMADOR BACKEND</div>
+            <ul>
+              <li>Desarrollo de plataformas de comercio electrónico (eCommerce).</li>
+              <li>Desarrollo de sistemas de gestión contable.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Universidad de las Ciencias Informáticas</div>
+            <div class="period">sep. 2018</div>
+            <div class="position">ANALISTA - PROGRAMADOR</div>
+            <ul>
+              <li>Levantamiento de requerimientos a clientes y soporte técnico.</li>
+              <li>Diseño e implementación de casos de prueba.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Centro de Informatización de Entidades - UCI</div>
+            <div class="period">2016</div>
+            <div class="position">PROGRAMADOR PRINCIPAL</div>
+            <ul>
+              <li>Desarrollo con Python, Django, ExtJS, Symfony, WordPress y PostgreSQL.</li>
+              <li>Diseño y administración de bases de datos con Oracle.</li>
+              <li>Administración de servidores y desarrollo de servicios SOA.</li>
+            </ul>
+          </div>
+          <div class="timeline-entry">
+            <div class="org">Universidad de Granma</div>
+            <div class="period">nov. 2015 - jun. 2016</div>
+            <div class="position">PROGRAMADOR</div>
+            <ul>
+              <li>Desarrollo de aplicaciones web con Python, Django, JavaScript y HTML5.</li>
+              <li>Desarrollo de aplicaciones desktop con Python y PyQt.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
